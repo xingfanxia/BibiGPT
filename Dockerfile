@@ -9,6 +9,7 @@
 
 # > Step 1 build NextJs
 FROM node:alpine AS builder
+RUN apk add --no-cache g++ make py3-pip git
 WORKDIR /app
 COPY . .
 

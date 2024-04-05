@@ -8,7 +8,7 @@ COPY . .
 
 ENV NODE_ENV development
 ENV PORT 3000
-
+RUN apk add --no-cache g++ make py3-pip git
 RUN rm -rf .env && npm ci
 
 EXPOSE 3000
